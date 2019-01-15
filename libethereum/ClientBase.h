@@ -168,7 +168,10 @@ public:
     Block blockByNumber(BlockNumber _h) const;
 
     int chainId() const override;
-    
+
+    ///< Empty implementation of getWork
+    std::tuple<h256, h256, h256> getWork() override;
+
 protected:
     /// The interface that must be implemented in any class deriving this.
     /// {

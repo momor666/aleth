@@ -527,3 +527,8 @@ int ClientBase::chainId() const
 {
 	return bc().chainParams().chainID;
 }
+
+std::tuple<h256, h256, h256> ClientBase::getWork()
+{
+    return std::tuple<h256, h256, h256>(h256(0), h256(0), h256(0));
+}
